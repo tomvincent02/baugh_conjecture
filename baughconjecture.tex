@@ -1,6 +1,6 @@
-\documentclass[12pt]{article}
+\documentclass{article}
 \usepackage{amsmath, amssymb}
-\usepackage{hyperref}
+\usepackage{hyperref,ragged2e}
 
 \title{Computing $\pi(x)$ Analytically}
 \author{David Baugh}
@@ -10,11 +10,12 @@
 
 \maketitle
 
-\begin{abstract}
-    We 
-\end{abstract}
 
-\section{Introduction}
+    ABSTRACT (needs fixing)
+
+\centering
+\section*{\textnormal{1. Introduction}}
+\flushleft
 
 Computing exact values of the function $\pi(x)$, which counts the number of primes less than or equal to $x$, has exercised mathematicians since antiquity. Early methods involved enumerating all the primes less than the target $x$ (using, for example, the sieve of Eratosthenes) and then counting them. In 1870 Meissel~\cite{Meissel} described a combinatorial method which he eventually used to manually compute $\pi(10^9)$~\cite{Lehmer} (albeit not quite accurately). The algorithm was subsequently improved by Lehmer~\cite{Lehmer}, then by Lagarias, Miller and Odlyzko~\cite{Lagarias}, and most recently by Deléglise and Rivat~\cite{Deleglise}. In 2007 Oliveira e Silva used the algorithm to compute $\pi(10^{23})$.
 
@@ -31,4 +32,3 @@ In their 1987 paper~\cite{Lagarias}, Lagarias and Odlyzko described an analytic 
 \end{thebibliography}
 
 \end{document}
-
