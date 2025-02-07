@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{hyperref}
+
+\title{Computing $\pi(x)$ Analytically}
+\author{David Baugh}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    We 
+\end{abstract}
+
+\section{Introduction}
+
+Computing exact values of the function $\pi(x)$, which counts the number of primes less than or equal to $x$, has exercised mathematicians since antiquity. Early methods involved enumerating all the primes less than the target $x$ (using, for example, the sieve of Eratosthenes) and then counting them. In 1870 Meissel~\cite{Meissel} described a combinatorial method which he eventually used to manually compute $\pi(10^9)$~\cite{Lehmer} (albeit not quite accurately). The algorithm was subsequently improved by Lehmer~\cite{Lehmer}, then by Lagarias, Miller and Odlyzko~\cite{Lagarias}, and most recently by Deléglise and Rivat~\cite{Deleglise}. In 2007 Oliveira e Silva used the algorithm to compute $\pi(10^{23})$.
+
+The Prime Number Theorem dictates that all methods reliant on enumerating the primes must have time complexity of $\Omega(x\log^{-1} x)$. The latest incarnations of the combinatorial method achieve $\mathcal{O}(x^{2/3} \log^{-2} x)$.
+
+In their 1987 paper~\cite{Lagarias}, Lagarias and Odlyzko described an analytic algorithm with (in one form) time complexity $\mathcal{O}(x^{1/2+\epsilon})$. In 2010 Büthe, Franke, Jost and Kleinjung announced a value for $\pi(10^{24})$~\cite{Buthe} contingent on the Riemann Hypothesis. Their approach "is similar to the one described by Lagarias and Odlyzko, but uses the Weil explicit formula instead of complex curve integrals." This paper describes an implementation reverting to Riemann’s explicit formula which we have used to compute $\pi(10^{24})$ unconditionally.
+
+\begin{thebibliography}{99}
+\bibitem{Meissel} Meissel, E.
+\bibitem{Lehmer} Lehmer, D.
+\bibitem{Lagarias} Lagarias, J., Miller, V., Odlyzko, A.
+\bibitem{Deleglise} Deléglise, M., Rivat, J.
+\bibitem{Buthe} Büthe, F., Franke, J., Jost, C., Kleinjung, T.
+\end{thebibliography}
+
+\end{document}
+
